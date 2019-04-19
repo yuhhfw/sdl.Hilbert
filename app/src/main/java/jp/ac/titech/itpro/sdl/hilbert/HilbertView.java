@@ -46,7 +46,7 @@ public class HilbertView extends View {
 
         paint.setColor(Color.WHITE);
         paint.setStrokeWidth(3);
-        int size = w < h ? w : h;
+        int size = Math.min(w, h);
         double step = (double) size / (1 << order);
         turtle.setPos((w - size + step) / 2, (h + size - step) / 2);
         turtle.setDir(HilbertTurtle.E);
